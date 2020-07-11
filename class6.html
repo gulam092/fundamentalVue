@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue js keyboard Events </title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+	
+</script>
+	
+</head>
+<body >
+<div id ="app">
+	<h2>My Name is  :{{name}}</h2>
+	<input type="text" name="" @keyup ="NameChange">
+</div>
+
+
+<script type="text/javascript" >
+	
+	let app = new Vue({
+el:'#app',
+data:{
+	name:"gulam khan"
+	
+},
+methods:{
+NameChange(e){
+     // console.log(e.target.value)
+     this.name  = e.target.value
+},
+
+}
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue js Events</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	
+</head>
+<body >
+<div id ="app">
+	<h2>{{dollor}}$</h2>
+	<!-- button v-on:click = "dollor++">+1</button>
+	<button @click = "dollor--">-1</button> -->
+	<button v-on:click = "Amount(5)">+</button>
+	<button @click = "Amount(-5)">-</button>
+</div>
+
+
+<script type="text/javascript" >
+	
+	let app = new Vue({
+el:'#app',
+data:{
+	dollor:100,
+	
+},
+methods:{
+	Amount(pound){
+		this.dollor = this.dollor+pound
+	}
+}
+
+});
+</script>
+</body>
+</html>

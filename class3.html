@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue js one way Data binding</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<style type="text/css" media="screen">
+		.one{
+     color: orange;
+		}
+		.two{
+            text-decoration: line-through;
+		}
+	</style>
+</head>
+<body >
+<div id ="app">
+	<a v-bind:href=" address ">vuejs</a>
+   <h1 :class="classes">Easy learing!</h1>
+   <input type="text" name="" v-bind:value="name">
+</div>
+
+
+<script type="text/javascript" >
+	
+	let app = new Vue({
+el:'#app',
+data:{
+	address:'https://vuejs.org/v2/guide/',
+	classes:['one','two'],
+	name:"Gulam khan"
+}
+
+});
+</script>
+</body>
+</html>

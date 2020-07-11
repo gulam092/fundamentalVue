@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue js  v if v Else etc  </title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+	
+</script>
+	
+</head>
+<body >
+<div id ="app">
+	<h2>{{message}}</h2>
+	<p v-if ="name">My project In Vue</p>
+	<p v-else-if ="age">24</p>
+	<button @click ="ShowName">show name:{{name}}</button>
+	<button @click ="Showage">show age:{{age}}</button>
+
+
+	
+</div>
+
+
+<script type="text/javascript" >
+	
+	let app = new Vue({
+el:'#app',
+data:{
+	message:"If Else Event",
+	name:true,
+	age:true
+	
+},
+methods:{
+ShowName(){
+  this.name = !this.name
+  
+
+},
+Showage(){
+	this.age = !this.age
+}
+ 
+
+}
+
+});
+</script>
+</body>
+</html>
